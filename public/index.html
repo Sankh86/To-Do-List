@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To Do List</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption|Permanent+Marker&display=swap" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/modern-normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js" defer></script>
+	<!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js" defer></script>
+	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js" defer></script>
+	<!-- My Script -->
+	<script src="js/app.js" defer></script>
+
+</head>
+<body>
+	<header>
+		<span>
+			<div>
+				<div id="welcome"></div>
+			</div>
+			<div class="menuframe">
+				<a id="account" style="display: none;">Account</a>
+				<a id="logout" style="display: none;">Sign Out</a>
+				<a id="login">Sign In</a>
+				<!-- Login Modal -->
+				<span id="loginmenu" style="display: none;">
+					<form id="loginform">
+						<label for="loginemail">E-mail:</label>
+						<input type="email" id="loginemail" placeholder="someone@email.com" size="25">
+						<label for="pwlogin">Password:</label>
+						<input type="password" id="loginpw" size="25">
+						<input type="submit" id="loginbtn" value="Sign In">
+					</form>
+					<p class="newbar">New User?<a id="newuser">Create Account</a></p>
+				</span>
+			</div>
+		</span>
+	</header>
+	<div class="content">
+		<main>
+			<h1>My To Do List</h1>
+			<section class="row">
+				<div class="critical-pressing listbox">
+					<h2>Critical - Pressing Items</h2>
+					<h4>These items are important and must be completed soon.</h4>
+					<ol id="critpress">
+					
+					</ol>
+				</div>
+				<div class="noncritical-pressing listbox">
+					<h2>Non-Critical - Pressing Items</h2>
+					<h4>These items aren't as important but must be completed soon.</h4>
+					<ol id="ncritpress">
+					
+					</ol>
+				</div>
+			</section>
+			<section class="row">
+				<div class="critical-nonpressing listbox">
+					<h2>Critical - Non-Pressing Items</h2>
+					<h4>These items are important but don't need to be completed soon.</h4>
+					<ol id="critnpress">
+					
+					</ol>
+				</div>
+				<div class="noncritical-nonpressing listbox">
+					<h2>Non-Critical - Non-Pressing Items</h2>
+					<h4>These items aren't as important and don't need to be completed soon.</h4>
+					<ol	id="ncritnpress">
+					
+					</ol>
+				</div>
+			</section>
+			<section id="completelist" class="listbox">
+				<div class="closecomplete" title="Hide Completed Items" onclick="hideComplete()">Hide</div>
+				<h2>Completed Items</h2>				
+				<h4>These items have been completed.  Well Done!</h4>
+				<ol id="complete">
+						
+				</ol>
+			</section>
+			<form>
+				<div id="showcomplete" title="Show Completed Items" onclick="showComplete()">Show Completed</div>
+				<h2>Add Item to List:</h2>
+				<input type="text" id="newtask" size="30" maxlength="30">
+				<select id="addlist">
+						<option value="critpress">Critical - Pressing</option>
+						<option value="ncritpress">Non-Critical - Pressing</option>
+						<option value="critnpress">Critical - Non-Pressing</option>
+						<option value="ncritnpress">Non-Critical - Non-Pressing</option>
+				</select>
+				<button type="button" id="submitTask">Add Task</button>
+			</form>
+		</main>
+	</div>
+	<footer>
+		<span>
+			<div>Created by David Cheatham</div>
+			<div>&copy; Copyright 2019</div>
+		</span>
+	</footer>
+	<!-- Create User Modal -->
+	<span id="acctform" style="display: none;">
+		<form id="newuser-form">
+			<h1>Create Account</h1>
+			<label for="newuser-email">E-mail</label>
+			<input type="email" id="newuser-email" placeholder="someone@email.com" size="25">
+			<p class="req">Required</p>
+			<label for="newuser-firstname">Name</label>
+			<input type="text" id="newuser-firstname" size="25">
+			<label for="newuser-pw">Password</label>
+			<input type="password" id="newuser-pw" placeholder="********" size="25">
+			<p class="req">Required</p>
+			<div>
+				<input type="submit" id="createacctbtn" value="Sign Up">
+				<input type="button" id="cancelacctbtn" value="Cancel">
+			</div>
+			
+		</form>
+	</span>
+</body>
+</html>

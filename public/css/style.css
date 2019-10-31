@@ -1,0 +1,568 @@
+header span,
+footer span,
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header * {
+    color: white;
+}
+
+#welcome {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 2px 5px;
+    display: none;
+}
+
+.menuframe a {
+    text-decoration: none;
+    font-size: .8rem;
+    padding: 5px 5px;
+    border-radius: 0px 0px 3px 3px;
+    cursor: pointer;
+}
+
+.menuframe {
+    position: relative;
+}
+
+#loginmenu {
+    position: absolute;
+    top: 29px;
+    right: 0;
+    /* display: flex;
+    flex-direction: column; */
+    font-size: 1rem;
+    background: #414141;
+    box-shadow: 3px 3px 5px rgba(0,0,0,.65);
+    border: 1px solid black;
+    border-radius: 0px 0px 5px 5px;
+}
+
+#loginmenu form {
+    background: none;
+    border: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+#loginmenu label {
+    font-size: .8rem;
+    margin-left: 10px;
+    
+}
+
+#loginmenu p {
+    font-size: .95rem;
+}
+
+#loginemail,
+#loginpw {
+    font-size: 1rem;
+    border-radius: 3px;
+    color: black;
+    text-align: left;
+    padding: 3px 5px;
+    margin: 1px 5px 5px;
+}
+
+#loginbtn,
+#createacctbtn,
+#cancelacctbtn {
+    margin: 3px 10px;
+    width: 100px;
+    padding: 5px;
+    color: black;
+    font-size: .9rem;
+    background: #72716f;
+    box-shadow: inset -4px -2px 5px rgba(0,0,0,.2), inset 2px 1px 3px rgba(255,255,255,.2);
+}
+
+#loginbtn:hover,
+#createacctbtn:hover,
+#cancelacctbtn:hover {
+    background: #afafb1;
+    color: black;
+}
+
+.newbar {
+    margin: 5px;
+    text-align: center;
+}
+
+#newuser {
+    margin-left: 5px;
+    text-decoration: underline;
+}
+
+#newuser:hover,
+.menuframe a:hover {
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.35);
+    color: black;
+}
+
+header {
+    background: #707070;
+    box-shadow: inset 0px -7px 10px rgba(0,0,0,.65);
+    border-bottom: black solid 1px;
+    height: 30px;
+}
+
+body{
+    font-family: 'PT Sans Caption', sans-serif;
+    background: #9fc0c9;
+    background: linear-gradient(180deg,#797979 0%, #1d1d1d 85%);
+    min-height: 100vh;
+    cursor: default;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: black;
+    margin: 5px;
+    padding: 10px;
+}
+
+h2 {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+ol {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,.55)
+}
+
+li {
+    font-size: .9rem;
+    font-weight: bold;
+    list-style: none;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 5px 10px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: inset -10px -5px 5px rgba(0,0,0,.2), inset 4px 2px 2px rgba(255,255,255,.2);
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+li span {
+    display: flex;
+}
+
+.listbox {
+    padding: 10px;
+}
+
+.btn {
+    height:30px;
+    width: 30px;
+    padding: 3px;
+    margin: 2px 1px;
+    border-radius: 5px;
+    box-shadow: inset -4px -2px 5px rgba(0,0,0,.2), inset 2px 1px 3px rgba(255,255,255,.2);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid #414546;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.trash {
+    margin-left: 10px;
+    background: #881515;
+    border: 1px solid #2b0909;    
+}
+
+.trash:hover {
+    background: #b41b1b;
+}
+
+.critical-pressing {
+    background: #913340;
+}
+
+.noncritical-pressing {
+    background: #947c3a;
+}
+
+.critical-nonpressing {
+    background: #373d7e;
+}
+
+.noncritical-nonpressing {
+    background: #367224;
+}
+
+form {
+    background: #a8a8a8;
+    padding: 5px;
+
+}
+
+input,
+select {
+    border-radius: 10px;
+    margin: 5px 10px;
+    font-size: .9rem;
+    font-weight: bold;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+input[type=text] {
+    padding: 7px;
+}
+
+input[type=email]:focus,
+input[type=text]:focus,
+input[type=password]:focus {
+    outline: 3px solid rgb(100, 140, 200);
+}
+
+select {
+    padding: 5px;
+}
+
+button {
+    background: #72716f;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+    box-shadow: inset -8px -4px 4px rgba(0,0,0,.2), inset 2px 1px 1px rgba(255,255,255,.2);
+    border-radius: 10px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+form button {
+    margin: 5px 10px;
+    padding: 5px 20px;
+}
+
+form button:hover {
+    background: #afafb1;
+}
+
+.content {
+    min-height: calc(100vh - 65px)
+}
+
+footer {
+    background: #202020;
+    box-shadow: inset 0px -10px 10px rgba(0,0,0,.75);
+    border-top: black solid 1px;
+    height: 30px;
+}
+
+header span,
+footer span {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer span div {
+    padding: 10px 5px 5px 5px;
+    color: white;
+    font-size: .7rem;
+}
+
+#delnode {
+    margin-left: 15%;
+    padding-left: 10px;
+    font-size: .8rem;
+    font-weight: bold;
+    background-color: rgba(0,0,0,.35);
+    color: white;
+    text-align: left;
+}
+
+#delnode button {
+    font-size: .75rem;
+    margin: 1px;
+    padding: 6px 0;
+    width: 70px;
+    text-align: center;
+}
+
+.delBtnSpan {
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+.movcomplete {
+    background-color: rgb(5, 100, 5);
+}
+
+.yesdel {
+    background-color: rgb(170, 10, 10);
+}
+
+.nodel {
+    background-color: rgb(150, 150, 150);
+}
+
+.movcomplete:hover,
+.yesdel:hover,
+.nodel:hover {
+    cursor: pointer;
+}
+
+.movcomplete:hover {
+    background-color: rgb(10, 160, 10);
+}
+
+.yesdel:hover {
+    background-color: rgb(225, 20, 20);
+}
+
+.nodel:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+#completelist {
+    background: rgb(115, 95, 155);
+    display: none;
+}
+
+#showcomplete {
+    display: inline;
+}
+
+.comptrash {
+    float: right;
+}
+
+#showcomplete,
+.closecomplete {
+    font-size: .75rem;
+    float: right;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+#showcomplete:hover,
+.closecomplete:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+#acctform {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0px;
+    padding: 10% 5%;
+    background: rgba(70, 70, 70, 0.75);
+}
+
+#acctform form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 5px 15px 30px rgba(0,0,0,.85);
+    max-width: 350px;
+    margin: auto;
+}
+
+#acctform h1 {
+    font-size: 2rem;
+    padding: 20px 0;
+    margin: 0;
+}
+
+#acctform input[type=email],
+#acctform input[type=text],
+#acctform input[type=password] {
+    padding: 4px 7px;
+    font-size: 1rem;
+    margin: 0;
+    border-radius: 5px;
+}
+
+#acctform label {
+    padding: 10px 10px 2px 10px;
+}
+
+#acctform div {
+    margin-top: 20px;
+}
+
+.req {
+    color: red;
+    text-align: left;
+    margin: 0 0 0 20px;
+    font-size: .7rem;
+}
+
+
+@media (min-width: 640px) {
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 15px;
+    }
+    
+    #welcome {
+        display: block;
+    }
+
+    #login {
+        font-weight: 1rem;
+    }
+    
+    li,
+    input,
+    select {
+        font-size: 1.1rem;
+        font-weight: normal;
+        
+    }
+    
+    .row {
+        display: flex;
+    }
+    
+    .listbox {
+        flex: 1;
+        border: 1px solid white;
+    }
+ 
+    .critical-pressing {
+        border-right: 3px solid black;
+        border-bottom: 3px solid black;
+        
+    }
+
+    .critical-nonpressing {
+        border-right: 3px solid black;
+    }
+
+    .noncritical-pressing {
+        border-bottom: 3px solid black;
+    }
+
+    #completelist {
+        margin-top: 20px;
+    }
+
+    #complete {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #complete li {
+        width: calc(50% - 15px);
+        display: inline-flex;
+    }
+
+    #complete li:nth-child(odd) {
+        margin-right: 5px;
+    }
+
+    #complete li:nth-child(even) {
+        margin-left: 5px;
+    }
+
+    form {
+        margin: 20px 0;
+        border: 1px solid white;
+    }
+   
+    #delnode {
+        font-size: .9rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        margin-bottom: 25px;
+    }
+    
+    li,
+    input,
+    select {
+        font-size: 1.3rem;
+    }
+    
+    .delBtnSpan {
+        flex-direction: row;
+    }
+
+    .critical-pressing {
+        border-radius: 20px 0 0 0;
+    }
+
+    .critical-nonpressing {
+        border-radius: 0 0 0 20px;
+    }
+
+    .noncritical-pressing {
+        border-radius: 0 20px 0 0;
+    }
+
+    .noncritical-nonpressing {
+        border-radius: 0 0 20px 0;
+    }
+    
+    #completelist {
+        border-radius: 20px;
+    }
+
+    #complete li {
+        width: calc(33.3% - 13.34px);
+    }
+
+    #complete li:nth-child(3n-2) {
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+
+    #complete li:nth-child(3n-1) {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    #complete li:nth-child(3n) {
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+
+    form {
+        border-radius: 20px;
+    }
+
+    #delnode {
+        font-size: 1rem;
+    }
+}
