@@ -51,7 +51,6 @@ header * {
 #loginmenu label {
     font-size: .8rem;
     margin-left: 10px;
-    
 }
 
 #loginmenu p {
@@ -161,7 +160,7 @@ li {
     background: rgba(255, 255, 255, 0.2);
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
 }
 
 li span {
@@ -191,7 +190,7 @@ li span {
 .trash {
     margin-left: 10px;
     background: #881515;
-    border: 1px solid #2b0909;    
+    border: 1px solid #2b0909;
 }
 
 .trash:hover {
@@ -432,7 +431,7 @@ footer span div {
         font-size: 4rem;
         margin-bottom: 15px;
     }
-    
+
     #welcome {
         display: block;
     }
@@ -440,28 +439,26 @@ footer span div {
     #login {
         font-weight: 1rem;
     }
-    
+
     li,
     input,
     select {
         font-size: 1.1rem;
         font-weight: normal;
-        
     }
-    
+
     .row {
         display: flex;
     }
-    
+
     .listbox {
         flex: 1;
         border: 1px solid white;
     }
- 
+
     .critical-pressing {
         border-right: 3px solid black;
         border-bottom: 3px solid black;
-        
     }
 
     .critical-nonpressing {
@@ -498,7 +495,7 @@ footer span div {
         margin: 20px 0;
         border: 1px solid white;
     }
-   
+
     #delnode {
         font-size: .9rem;
     }
@@ -508,13 +505,13 @@ footer span div {
     h1 {
         margin-bottom: 25px;
     }
-    
+
     li,
     input,
     select {
         font-size: 1.3rem;
     }
-    
+
     .delBtnSpan {
         flex-direction: row;
     }
@@ -534,7 +531,7 @@ footer span div {
     .noncritical-nonpressing {
         border-radius: 0 0 20px 0;
     }
-    
+
     #completelist {
         border-radius: 20px;
     }

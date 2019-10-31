@@ -57,7 +57,7 @@ newuserform.addEventListener('submit', function (e) {
 
     auth.createUserWithEmailAndPassword(email, pw).then(cred => {
         acctform.style.display = "none";
-        newuserform.reset();       
+        newuserform.reset();
 
         let user = auth.currentUser;
         let uid = user.uid;
@@ -199,7 +199,7 @@ const changeCrit = function () {
     let currentitm = this.parentElement.previousSibling.nodeValue;
     let itmIndex = listObj[nodeList].indexOf(currentitm)
     let newParent = ""
-    
+
     if (document.querySelector("#delnode") !== null) {
         let dnode = document.getElementById("delnode")
         dnode.parentNode.removeChild(dnode)
@@ -230,12 +230,12 @@ const changeTime = function () {
     let currentitm = this.parentElement.previousSibling.nodeValue;
     let itmIndex = listObj[nodeList].indexOf(currentitm)
     let newParent = ""
-    
+
     if (document.querySelector("#delnode") !== null) {
         let dnode = document.getElementById("delnode")
         dnode.parentNode.removeChild(dnode)
     }
-    
+
     if (wrapper.parentElement.id.indexOf("ncrit") === -1) {
         newParent = "crit";
     } else {
@@ -274,7 +274,7 @@ const throwAway = function () {
         let dnode = document.getElementById("delnode")
         dnode.parentNode.removeChild(dnode)
     }
-    
+
     if(nodeList === "complete") {
         listObj[nodeList].splice(itmIndex, 1);
         if (loggedin) {db.collection("Users").doc(listid).set(listObj)};
@@ -294,7 +294,7 @@ const throwAway = function () {
         yesno.appendChild(nodel);
         delnode.appendChild(yesno);
         delnode.setAttribute("id", "delnode")
-        
+
         wrapper.parentNode.insertBefore(delnode, wrapper.nextElementSibling);
 
         const cancelbtn = document.querySelector(".nodel");
@@ -354,11 +354,11 @@ function populateLists() {
     }
 
     for (prop in listObj) {
-        
+
         if (prop !== "complete") {
             list = document.getElementById(prop);
-            
-            for (j = 0; j < listObj[prop].length; j++) {            
+
+            for (j = 0; j < listObj[prop].length; j++) {
                 node = document.createElement("LI");
                 navbar = document.createElement("SPAN");
                 navup = document.createElement("IMG");
@@ -385,7 +385,7 @@ function populateLists() {
                 trash.classList.add("trash", "btn");
                 trash.setAttribute("src", "img/trash.png");
                 trash.setAttribute("title", "Remove Item")
-                
+
                 navbar.appendChild(navup);
                 navbar.appendChild(navdwn);
                 shftbar.appendChild(impshft);
@@ -394,29 +394,29 @@ function populateLists() {
                 node.appendChild(navbar);
                 node.appendChild(taskinfo);
                 node.appendChild(shftbar);
-                        
+
                 list.appendChild(node);
             }
         }
     }
-    
-    for (i = 0; i < listObj["complete"].length; i++) {        
+
+    for (i = 0; i < listObj["complete"].length; i++) {
         list = document.getElementById("complete");
         node = document.createElement("LI");
         navbar = document.createElement("SPAN");
         shftbar = document.createElement("SPAN");
         trash = document.createElement("IMG");
         taskinfo = document.createTextNode(listObj["complete"][i]);
-        
+
         trash.classList.add("trash", "btn", "comptrash");
         trash.setAttribute("src", "img/trash.png");
         trash.setAttribute("title", "Remove Item")
-        
+
         shftbar.appendChild(trash);
         node.appendChild(navbar);
         node.appendChild(taskinfo);
         node.appendChild(shftbar);
-                
+
         list.appendChild(node);
     }
 
@@ -449,7 +449,7 @@ function populateLists() {
 
 // Add Task
 const submitTask = document.querySelector("#submitTask");
-        
+
 submitTask.addEventListener('click', function () {
     let addlist = document.getElementById("addlist").value;
     let newtask = document.getElementById("newtask").value;
